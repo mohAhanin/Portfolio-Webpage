@@ -36,7 +36,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10; /* Ensure header is above other content */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -72,13 +72,13 @@ nav ul li a:hover {
   color: #ccc;
 }
 
+
 /* Hero section */
 .hero {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data-science-bg.jpg'); /* Updated image */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
+  height: 60vh; /* Reduced height */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,7 +86,7 @@ nav ul li a:hover {
   text-align: center;
   color: #fff;
   position: relative;
-  padding: 20px;
+  padding: 100px 20px 20px; /* Added top padding to accommodate header */
 }
 
 .hero::before {
@@ -96,35 +96,33 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6); /* Adjusted overlay color */
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   max-width: 800px;
-  padding: 40px;
-  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px; /* Reduced padding */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Reduced shadow for a subtle effect */
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 36px; /* Reduced font size */
+  margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 24px;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 18px; /* Reduced font size */
+  margin-bottom: 20px;
 }
 
 .hero .btn {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: #007bff;
+  padding: 10px 20px; /* Adjusted padding */
+  background-color: #007bff; /* Consistent color with the rest of the site */
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -134,6 +132,8 @@ nav ul li a:hover {
 .hero .btn:hover {
   background-color: #0056b3;
 }
+
+
 /* Sections */
 section {
   margin-bottom: 60px;
@@ -150,14 +150,37 @@ section h2 {
 .about-content {
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 40px 20px; /* Reduce padding for a smaller section */
+  background-color: #f4f4f4; /* Add a subtle background color for better separation */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  max-width: 800px; /* Constrain the width */
+  margin: 0 auto; /* Center the section */
 }
 
 .about-image img {
-  max-width: 300px;
-  border-radius: 50%;
-  margin-right: 40px;
+  max-width: 150px; /* Reduce image size */
+  border-radius: 10px; /* Rounded corners instead of a circle */
+  margin-right: 20px; /* Adjust margin for better spacing */
 }
 
+.about-details {
+  flex: 1; /* Allow the text to take up remaining space */
+}
+
+.about-details h3 {
+  font-size: 28px; /* Slightly smaller heading */
+  margin-bottom: 10px;
+}
+
+.about-details p {
+  margin-bottom: 10px;
+  font-size: 18px; /* Slightly smaller text */
+}
+
+
+/* Skills section */
 /* Skills section */
 .skills-list {
   display: grid;
@@ -166,18 +189,57 @@ section h2 {
 }
 
 .skill {
-  background-color: #f4f4f4;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
-.skill i {
-  font-size: 48px;
-  color: #333;
-  margin-bottom: 10px;
+.skill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text readability */
 }
+
+.skill h3, .skill p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Specific Skill Background Images */
+.skill.programming {
+  background-image: url('programming-bg.jpg'); /* Replace with your image URL */
+}
+
+.skill.data-analysis {
+  background-image: url('data-analysis-bg.jpg'); /* Replace with your image URL */
+}
+
+.skill.machine-learning {
+  background-image: url('machine-learning-bg.jpg'); /* Replace with your image URL */
+}
+
+.skill.database {
+  background-image: url('database-bg.jpg'); /* Replace with your image URL */
+}
+
+.skill.nlp {
+  background-image: url('nlp-bg.jpg'); /* Replace with your image URL */
+}
+
+.skill.deep-learning {
+  background-image: url('deep-learning-bg.jpg'); /* Replace with your image URL */
+}
+
 
 /* Projects section */
 .projects-grid {
@@ -303,6 +365,51 @@ footer {
   padding: 20px;
 }
 
+/* Education section */
+#education {
+  position: relative;
+  padding: 20px;
+  color: white; /* Ensures text is visible over the background */
+}
+
+#education::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('university.jpg') no-repeat center center;
+  background-size: cover;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.education-content {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to content for better readability */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.education-image img {
+  max-width: 300px;
+  border-radius: 5px;
+  margin-right: 40px;
+}
+
+.education-details h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.education-details p {
+  margin-bottom: 5px;
+}
+
 /* Media queries */
 @media (max-width: 768px) {
   .about-content {
@@ -327,38 +434,15 @@ footer {
   }
 
   .education-content {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
   }
-  
+
+  .education-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
   .education-image img {
-    max-width: 300px;
-    border-radius: 5px;
-    margin-right: 40px;
-  }
-  
-  .education-details h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .education-details p {
-    margin-bottom: 5px;
-  }
-  
-  /* Media queries */
-  @media (max-width: 768px) {
-    .education-content {
-      flex-direction: column;
-    }
-  
-    .education-image {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  
-    .education-image img {
-      max-width: 100%;
-    }
+    max-width: 200px;
   }
 }
