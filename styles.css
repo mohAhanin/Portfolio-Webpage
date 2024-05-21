@@ -151,16 +151,33 @@ section h2 {
 }
 
 /* About section */
+#about {
+  position: relative;
+  padding: 60px 0; /* Adjust padding as needed */
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('about.jpg'); /* Replace with the path to your image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Adjust the blur amount as desired */
+  z-index: -1; /* Ensure the blurred background is behind the content */
+}
+
 .about-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px; /* Reduce padding for a smaller section */
-  background-color: #f4f4f4; /* Add a subtle background color for better separation */
-  border-radius: 15px; /* Rounded corners for a modern look */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  max-width: 800px; /* Constrain the width */
-  margin: 0 auto; /* Center the section */
+  position: relative;
+  z-index: 1; /* Ensure the content is on top of the blurred background */
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background for better readability */
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about-image img {
