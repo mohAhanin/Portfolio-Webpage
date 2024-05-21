@@ -13,6 +13,10 @@ html, body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Layout */
 body {
   display: flex;
@@ -181,7 +185,6 @@ section h2 {
 
 
 /* Skills section */
-/* Skills section */
 .skills-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -198,6 +201,12 @@ section h2 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease;
+
+}
+
+.skill:hover {
+  transform: translateY(-5px);
 }
 
 .skill::before {
@@ -399,6 +408,11 @@ footer {
   max-width: 300px;
   border-radius: 5px;
   margin-right: 40px;
+  transition: transform 0.3s ease; /* Add this line */
+}
+
+.education-image img:hover {
+  transform: scale(1.1); /* Scale up the image by 10% on hover */
 }
 
 .education-details h3 {
