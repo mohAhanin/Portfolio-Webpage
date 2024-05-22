@@ -40,7 +40,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; /* Ensure header is above other content */
+  z-index: 10;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,13 +76,12 @@ nav ul li a:hover {
   color: #ccc;
 }
 
-
 /* Hero section */
 .hero {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data-science-bg.jpg'); /* Updated image */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data-science-bg.jpg');
   background-size: cover;
   background-position: center;
-  height: 60vh; /* Reduced height */
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +89,7 @@ nav ul li a:hover {
   text-align: center;
   color: #fff;
   position: relative;
-  padding: 100px 20px 20px; /* Added top padding to accommodate header */
+  padding: 100px 20px 20px;
 }
 
 .hero::before {
@@ -100,33 +99,33 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Adjusted overlay color */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   max-width: 800px;
-  padding: 20px; /* Reduced padding */
-  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Reduced shadow for a subtle effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero h1 {
-  font-size: 36px; /* Reduced font size */
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 18px; /* Reduced font size */
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
 .hero .btn {
   display: inline-block;
-  padding: 10px 20px; /* Adjusted padding */
-  background-color: #007bff; /* Consistent color with the rest of the site */
+  padding: 10px 20px;
+  background-color: #007bff;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -136,7 +135,6 @@ nav ul li a:hover {
 .hero .btn:hover {
   background-color: #0056b3;
 }
-
 
 /* Sections */
 section {
@@ -153,7 +151,7 @@ section h2 {
 /* About section */
 #about {
   position: relative;
-  padding: 60px 0; /* Adjust padding as needed */
+  padding: 60px 0;
 }
 
 #about::before {
@@ -163,43 +161,94 @@ section h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('about.jpg'); /* Replace with the path to your image */
+  background-image: url('about.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(10px); /* Adjust the blur amount as desired */
-  z-index: -1; /* Ensure the blurred background is behind the content */
+  filter: blur(10px);
+  z-index: -1;
 }
 
 .about-content {
   position: relative;
-  z-index: 1; /* Ensure the content is on top of the blurred background */
-  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background for better readability */
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 40px;
   border-radius: 10px;
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .about-image img {
-  max-width: 150px; /* Reduce image size */
-  border-radius: 10px; /* Rounded corners instead of a circle */
-  margin-right: 20px; /* Adjust margin for better spacing */
+  max-width: 150px;
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
 .about-details {
-  flex: 1; /* Allow the text to take up remaining space */
+  flex: 1;
 }
 
 .about-details h3 {
-  font-size: 28px; /* Slightly smaller heading */
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
 .about-details p {
   margin-bottom: 10px;
-  font-size: 18px; /* Slightly smaller text */
+  font-size: 18px;
 }
 
+/* Education section */
+#education {
+  position: relative;
+  padding: 20px;
+  color: white;
+}
+
+#education::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('university.jpg') no-repeat center center;
+  background-size: cover;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.education-content {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.education-image img {
+  max-width: 300px;
+  border-radius: 5px;
+  margin-right: 40px;
+  transition: transform 0.3s ease;
+}
+
+.education-image img:hover {
+  transform: scale(1.1);
+}
+
+.education-details h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.education-details p {
+  margin-bottom: 5px;
+}
 
 /* Skills section */
 .skills-list {
@@ -219,7 +268,6 @@ section h2 {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
-
 }
 
 .skill:hover {
@@ -233,7 +281,7 @@ section h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text readability */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .skill h3, .skill p {
@@ -241,69 +289,67 @@ section h2 {
   z-index: 1;
 }
 
-/* Specific Skill Background Images */
 .skill.programming {
-  background-image: url('programming-bg.jpg'); /* Replace with your image URL */
+  background-image: url('programming-bg.jpg');
 }
 
 .skill.data-analysis {
-  background-image: url('data-analysis-bg.jpg'); /* Replace with your image URL */
+  background-image: url('data-analysis-bg.jpg');
 }
 
 .skill.machine-learning {
-  background-image: url('machine-learning-bg.jpg'); /* Replace with your image URL */
+  background-image: url('machine-learning-bg.jpg');
 }
 
 .skill.database {
-  background-image: url('database-bg.jpg'); /* Replace with your image URL */
+  background-image: url('database-bg.jpg');
 }
 
 .skill.nlp {
-  background-image: url('nlp-bg.jpg'); /* Replace with your image URL */
+  background-image: url('nlp-bg.jpg');
 }
 
 .skill.deep-learning {
-  background-image: url('deep-learning-bg.jpg'); /* Replace with your image URL */
-}
-
-
-/* Projects section */
-.projects-grid {
+  background-image: url('deep-learning-bg.jpg');
+ }
+ 
+ /* Projects section */
+ .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
-}
-
-.project {
+ }
+ 
+ .project {
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-}
-
-.project:hover {
+ }
+ 
+ .project:hover {
   transform: translateY(-5px);
-}
-
-.project img {
+ }
+ 
+ .project img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 5px;
   margin-bottom: 10px;
-}
-
-.project h3 {
+ }
+ 
+ .project h3 {
   font-size: 24px;
   margin-bottom: 10px;
-}
-
-.project p {
+ }
+ 
+ .project p {
   margin-bottom: 20px;
-}
-
-.project a {
+ }
+ 
+ .project a {
   display: inline-block;
   background-color: #333;
   color: #fff;
@@ -311,65 +357,65 @@ section h2 {
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-}
-
-.project a:hover {
+ }
+ 
+ .project a:hover {
   background-color: #555;
-}
-
-/* Experience section */
-.experience-list {
+ }
+ 
+ /* Experience section */
+ .experience-list {
   list-style: none;
   padding: 0;
-}
-
-.experience-item {
+ }
+ 
+ .experience-item {
   margin-bottom: 40px;
-}
-
-.experience-item h3 {
+ }
+ 
+ .experience-item h3 {
   font-size: 24px;
   margin-bottom: 10px;
-}
-
-.experience-item p {
+ }
+ 
+ .experience-item p {
   margin-bottom: 10px;
-}
-
-.experience-item .date {
+ }
+ 
+ .experience-item .date {
   font-style: italic;
   color: #666;
-}
-
-/* Contact section */
-.contact-form {
+ }
+ 
+ /* Contact section */
+ .contact-form {
   max-width: 600px;
   margin: 0 auto;
-}
-
-.form-group {
+ }
+ 
+ .form-group {
   margin-bottom: 20px;
-}
-
-.form-group label {
+ }
+ 
+ .form-group label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
+ }
+ 
+ .form-group input,
+ .form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-
-.form-group textarea {
+ }
+ 
+ .form-group textarea {
   height: 150px;
-}
-
-.form-group button {
+ }
+ 
+ .form-group button {
   background-color: #333;
   color: #fff;
   border: none;
@@ -377,103 +423,53 @@ section h2 {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.form-group button:hover {
+ }
+ 
+ .form-group button:hover {
   background-color: #555;
-}
-
-/* Footer */
-footer {
+ }
+ 
+ /* Footer */
+ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 20px;
-}
-
-/* Education section */
-#education {
-  position: relative;
-  padding: 20px;
-  color: white; /* Ensures text is visible over the background */
-}
-
-#education::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('university.jpg') no-repeat center center;
-  background-size: cover;
-  filter: blur(8px);
-  z-index: -1;
-}
-
-.education-content {
-  position: relative;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to content for better readability */
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.education-image img {
-  max-width: 300px;
-  border-radius: 5px;
-  margin-right: 40px;
-  transition: transform 0.3s ease; /* Add this line */
-}
-
-.education-image img:hover {
-  transform: scale(1.1); /* Scale up the image by 10% on hover */
-}
-
-.education-details h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.education-details p {
-  margin-bottom: 5px;
-}
-
-/* Media queries */
-@media (max-width: 768px) {
+ }
+ 
+ /* Media queries */
+ @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
   }
-
+ 
   .about-image {
     margin-right: 0;
     margin-bottom: 20px;
   }
-
+ 
   .about-image img {
     max-width: 200px;
   }
-
+ 
   .hero h1 {
     font-size: 36px;
   }
-
+ 
   .hero p {
     font-size: 20px;
   }
-
+ 
   .education-content {
     flex-direction: column;
   }
-
+ 
   .education-image {
     margin-right: 0;
     margin-bottom: 20px;
   }
-
+ 
   .education-image img {
     max-width: 200px;
   }
-}
+ }
