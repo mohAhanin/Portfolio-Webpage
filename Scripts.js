@@ -22,3 +22,4 @@ navLinks.forEach(link => {
     });
   });
 });
+
