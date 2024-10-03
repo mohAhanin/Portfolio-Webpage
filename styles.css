@@ -168,7 +168,8 @@ section h2 {
   z-index: -1;
 }
 #about h2 {
-  color:#333;
+  color:#666;
+  align-items: flex-start;
 }
 .about-content {
   position: relative;
