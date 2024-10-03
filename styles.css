@@ -122,7 +122,7 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-.hero .btn {
+/* .hero .btn {
   display: inline-block;
   padding: 10px 20px;
   background-color: #007bff;
@@ -130,7 +130,7 @@ nav ul li a:hover {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-}
+} */
 
 .hero .btn:hover {
   background-color: #0056b3;
@@ -167,7 +167,9 @@ section h2 {
   filter: blur(10px);
   z-index: -1;
 }
-
+#about h2 {
+  color:#333;
+}
 .about-content {
   position: relative;
   z-index: 1;
@@ -177,6 +179,8 @@ section h2 {
   max-width: 800px;
   margin: 0 auto;
   display: flex;
+  /* Reverse the order of elements */
+  flex-direction: row-reverse;
   align-items: center;
 }
 
@@ -433,3 +437,39 @@ section h2 {
     max-width: 200px;
   }
  }
+ .experience-section {
+  margin-top: 40px;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-item {
+  margin-bottom: 30px;
+  border-left: 3px solid #007bff;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.experience-item:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.experience-item p {
+  margin-bottom: 5px;
+}
+
+.experience-item .date {
+  font-style: italic;
+  color: #666;
+}
