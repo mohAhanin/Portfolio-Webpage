@@ -202,69 +202,67 @@ section h2 {
   font-size: 18px;
 }
 
-/* Education section */
 #education {
   position: relative;
   padding: 60px 0;
-}
-
-#education::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: url('university.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(10px);
-  z-index: -1;
+  filter: blur(0); /* Remove blur */
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
 }
 
 #education h2 {
-  color: #666;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark box behind text */
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-size: 40px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow for emphasis */
 }
+
 
 .education-content {
-  transition: transform 0.3s ease-in-out;
-  position: relative;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 15px;
   padding: 40px;
-  border-radius: 10px;
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  max-width: 900px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 .education-content:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Enlarges the content on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Adds a shadow effect for better focus */
 }
 
 .education-image img {
-  max-width: 150px;
-  border-radius: 10px;
-  margin-right: 20px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
 }
 
-.education-details {
-  flex: 1;
+.education-image img:hover {
+  transform: scale(1.1); /* Slight zoom-in effect for the image */
 }
 
-.education-details h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
+.education-details h3, .education-details h4 {
+  color: #ffcc00;
 }
 
 .education-details p {
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-bottom: 8px;
 }
+
+
 
 /* Skills section */
 .skills-list {
