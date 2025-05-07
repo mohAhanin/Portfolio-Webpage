@@ -76,6 +76,26 @@ nav ul li a:hover {
   color: #ccc;
 }
 
+/* Hamburger menu for mobile */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger-btn span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
 /* Hero section */
 .hero {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data-science-bg.jpg');
@@ -209,8 +229,9 @@ section h2 {
   background-size: cover;
   background-position: center;
   filter: blur(0); /* Remove blur */
-  height: 100vh; /* Full screen height */
+  min-height: 100vh; /* Full screen height */
   display: flex;
+  flex-direction: column;
   align-items: center; /* Vertical centering */
   justify-content: center; /* Horizontal centering */
 }
@@ -261,8 +282,6 @@ section h2 {
 .education-details p {
   margin-bottom: 8px;
 }
-
-
 
 /* Skills section */
 .skills-list {
@@ -441,24 +460,112 @@ footer {
 
 /* Media queries */
 @media (max-width: 768px) {
-  .about-content, .education-content {
-    flex-direction: column;
+  /* Hamburger menu */
+  .hamburger-btn {
+    display: flex;
   }
-
-  .about-image, .education-image {
+  
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 9;
+  }
+  
+  nav ul.show {
+    right: 0;
+  }
+  
+  nav ul li {
+    margin: 15px 0;
+  }
+  
+  /* About section */
+  .about-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .about-image {
     margin-right: 0;
     margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about-image img {
+    max-width: 150px;
   }
 
-  .about-image img, .education-image img {
-    max-width: 200px;
+  /* Education section */
+  #education {
+    height: auto;
+    padding: 40px 0;
   }
-
+  
+  .education-content {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  
+  .education-image {
+    margin-bottom: 20px;
+  }
+  
+  /* Skills section */
+  .skills-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Projects section */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Hero section text */
   .hero h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
-
+  
   .hero p {
+    font-size: 16px;
+  }
+  
+  /* Section headers */
+  section h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* More restrictive styles for very small devices */
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content {
+    padding: 15px;
+  }
+  
+  .about-content, .education-content {
+    padding: 15px;
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+  
+  .logo a {
     font-size: 20px;
+  }
+  
+  .project {
+    padding: 15px;
   }
 }
