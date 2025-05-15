@@ -1,0 +1,189 @@
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCursor {
+  from, to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: var(--accent-color);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animations to elements */
+.section {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.name {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: 
+    typewriter 2.5s steps(25, end) 0.5s forwards,
+    blinkCursor 0.75s step-end infinite;
+  border-right: 3px solid var(--accent-color);
+  width: 0;
+}
+
+.welcome-section {
+  animation: fadeIn 1s ease-out 2.5s forwards;
+  opacity: 0;
+}
+
+.project-card:nth-child(odd) {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.project-card:nth-child(even) {
+  animation: fadeInRight 0.6s ease-out forwards;
+}
+
+.education-card:hover,
+.experience-card:hover {
+  animation: pulse 1s ease-in-out;
+}
+
+.skill-category {
+  animation: fadeIn 0.6s ease-out forwards;
+  animation-delay: calc(var(--animation-order, 0) * 0.1s);
+}
+
+/* Staggered animations for skills */
+.skill-category:nth-child(1) { --animation-order: 1; }
+.skill-category:nth-child(2) { --animation-order: 2; }
+.skill-category:nth-child(3) { --animation-order: 3; }
+.skill-category:nth-child(4) { --animation-order: 4; }
+.skill-category:nth-child(5) { --animation-order: 5; }
+.skill-category:nth-child(6) { --animation-order: 6; }
+
+/* Hover animations */
+.nav-links a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: none;
+  color: var(--accent-color);
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+/* Create a typing cursor effect for section titles */
+.section-title::after {
+  content: '_';
+  animation: blinkCursor 1s step-end infinite;
+  opacity: 0;
+  margin-left: 2px;
+}
+
+.section-title:hover::after {
+  opacity: 1;
+}
+
+/* Animated background for the hero section */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(-45deg, var(--accent-light), transparent);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  opacity: 0.5;
+}
+
+/* Skills animation */
+.skill-list li {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-list li::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--accent-color) 10%, transparent 10.5%);
+  background-size: 10px 10px;
+  opacity: 0.1;
+  transform: rotate(45deg);
+  animation: gradientBG 10s linear infinite;
+  z-index: -1;
+}

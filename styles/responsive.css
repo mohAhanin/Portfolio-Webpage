@@ -1,0 +1,234 @@
+/* Responsive Styles */
+
+/* Base mobile-first approach */
+@media (max-width: 768px) {
+  /* Profile photo responsive styles */
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Navbar responsive styles */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: var(--spacing-unit);
+    gap: var(--spacing-unit);
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-unit);
+    border-radius: var(--radius-md);
+    box-shadow: var(--card-shadow);
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: calc(var(--spacing-unit) * 3);
+    right: calc(var(--spacing-unit) * 3);
+  }
+  
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Typography adjustments */
+  .name {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .welcome-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  /* Education layout */
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .education-period {
+    margin-top: var(--spacing-unit);
+  }
+  
+  /* Skills layout */
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Project cards */
+  .project-card {
+    padding: calc(var(--spacing-unit) * 2);
+  }
+  
+  .project-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  /* Reduce animations on mobile for performance */
+  .name {
+    animation: none;
+    width: auto;
+    border-right: none;
+  }
+  
+  .welcome-section {
+    animation: none;
+    opacity: 1;
+  }
+  
+  .project-card:nth-child(odd),
+  .project-card:nth-child(even) {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  /* Contact info adjustments */
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+  }
+
+  .contact-icon {
+    margin-bottom: var(--spacing-unit);
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-unit);
+    align-items: flex-start;
+  }
+
+  .social-link {
+    margin: 0;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .container {
+    padding: calc(var(--spacing-unit) * 2);
+  }
+  
+  .project-card {
+    padding: calc(var(--spacing-unit) * 3);
+  }
+  
+  .name {
+    font-size: var(--font-size-2xl);
+  }
+
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .container {
+    padding: calc(var(--spacing-unit) * 4);
+  }
+  
+  .about-content {
+    flex-direction: row;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .name {
+    font-size: var(--font-size-3xl);
+  }
+  
+  /* Enhanced animations for desktop */
+  @keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .project-card:hover {
+    animation: floatUpDown 2s ease-in-out infinite;
+  }
+}
+
+/* Print-friendly styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+    font-size: 12pt;
+  }
+  
+  .header, .footer, .nav-links, .theme-toggle {
+    display: none;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+    padding: 1cm 0;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .project-card, .experience-card, .education-card, .skill-category {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  /* Ensure skill lists appear properly */
+  .skill-list li {
+    background: none;
+    border: 1px solid #ccc;
+  }
+
+  .profile-photo {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+}

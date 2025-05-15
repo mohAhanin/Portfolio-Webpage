@@ -1,186 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammad Amin Ahanin - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammad Amin Ahanin | Portfolio</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
 </head>
-
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="https://www.linkedin.com/in/mohammadamin-ahanin-a5729a236/" target="_blank">Mohammadamin Ahanin</a>
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn">
+      <span class="toggle-icon light">☀️</span>
+      <span class="toggle-icon dark">🌙</span>
+    </button>
+  </div>
+  
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo"><span class="code-tag">&lt;</span>MA<span class="code-tag">/&gt;</span></div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+        </ul>
+        <button class="menu-toggle" id="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+      </nav>
+      
+      <div class="hero">
+        <div class="profile-container">
+          <div class="profile-photo">
+            <!-- Replace the URL with your actual photo URL -->
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Mohammad Amin Ahanin" class="profile-img">
+          </div>
+        </div>
+        <h1 class="name">Mohammad Amin Ahanin</h1>
+        <div class="welcome-section">
+          <h2 class="welcome-title">Welcome</h2>
+          <p>Explore my projects and skills in Data Analysis, Machine Learning, and more.</p>
+        </div>
       </div>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-      </ul>
-      <div class="hamburger-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome </h1>
-      <p>Explore my projects and skills in Data Analysis, Machine Learning, and more.</p>
-    </div>
-  </section>
-
-
-  <section id="about">
-    <div class="about-content">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>Excited to tackle challenging data projects with my skills in data science and machine learning. Eager to
-          contribute to team success and make an impact.</p>
-        <p>Email: <a href="mailto:maahaninir@gmail.com">maahaninir@gmail.com</a></p>
-        <p>Phone: +98 9339174250</p>
-        <p>Location: Shiraz, Iran</p>
-        <p>
-          <a href="https://www.linkedin.com/in/mohammadamin-ahanin/" target="_blank">LinkedIn</a> |
-          <a href="https://github.com/mohAhanin" target="_blank">GitHub</a> |
-          <a href="https://scholar.google.com/citations?user=r7srYJ8AAAAJ&hl=en" target="_blank">Google Scholar</a>
-        </p>
-      </div>
-      <div class="about-image">
-        <img src="ax.jpg" alt="Mohammad Amin Ahanin">
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-content">
-        <div class="education-image">
-            <a href="https://www.sutech.ac.ir" target="_blank">
-                <img src="university.jpg" alt="Shiraz University of Technology">
-            </a>
+  <main>
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title"><span class="code-comment">// </span>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Excited to tackle challenging data projects with my skills in data science and machine learning. Eager to contribute to team success and make an impact.</p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <span>Email: <a href="mailto:maahaninir@gmail.com">maahaninir@gmail.com</a></span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <span>Phone: +98 9339174250</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <span>Location: Shiraz, Iran</span>
+              </div>
+              <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a> |
+                <a href="#" class="social-link">GitHub</a> |
+                <a href="#" class="social-link">Google Scholar</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="education-details">
-            <h3>Bachelor of Science in Computer Engineering</h3>
-            <h4>Shiraz University of Technology</h4>
-            <h5>Ranked 501 - 600 in the World University Rankings 2024</h5>
-            <p>📍 Location: Shiraz, Moddares Boulevard</p>
-            <p>📅 September 2021 - Present</p>
-            <p>📊 GPA: <b>16.23/20</b> (ranking in the top 20% of the class)</p>
-            <p>🔬 Researcher at the Laboratory of Data & Cognitive Science</p>
-            <p>👨‍🏫 Served as a Teaching Assistant for Database Course</p>
+      </div>
+    </section>
+
+    <section id="education" class="section education-section">
+      <div class="container">
+        <h2 class="section-title"><span class="code-comment">// </span>Education</h2>
+        <div class="education-card">
+          <div class="education-header">
+            <h3>Shiraz University of Technology</h3>
+            <span class="education-period">September 2021 - Present</span>
+          </div>
+          <p class="education-degree">Bachelor of Science in Computer Engineering</p>
+          <div class="education-details">
+            <p><span class="detail-icon">🏫</span> Ranked 501 - 600 in the World University Rankings 2024</p>
+            <p><span class="detail-icon">📍</span> Location: Shiraz, Moddares Boulevard</p>
+            <p><span class="detail-icon">📊</span> GPA: 16.23/20 (ranking in the top 20% of the class)</p>
+            <p><span class="detail-icon">🔬</span> Researcher at the Laboratory of Data & Cognitive Science</p>
+            <p><span class="detail-icon">👨‍🏫</span> Served as a Teaching Assistant for Database Course</p>
+          </div>
         </div>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill programming">
-        <h3>Programming</h3>
-        <p>C++, C#, Java, Python</p>
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2 class="section-title"><span class="code-comment">// </span>Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3 class="skill-category-title">Programming</h3>
+            <ul class="skill-list">
+              <li>C++</li>
+              <li>C#</li>
+              <li>Java</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Data Analysis</h3>
+            <ul class="skill-list">
+              <li>Pandas</li>
+              <li>NumPy</li>
+              <li>SQL</li>
+              <li>Power BI</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Machine Learning</h3>
+            <ul class="skill-list">
+              <li>TensorFlow</li>
+              <li>Keras</li>
+              <li>Scikit-learn</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Database</h3>
+            <ul class="skill-list">
+              <li>SQL Server</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">NLP</h3>
+            <ul class="skill-list">
+              <li>NLTK</li>
+              <li>LLMs</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Deep Learning</h3>
+            <ul class="skill-list">
+              <li>CNN</li>
+              <li>Yolo</li>
+              <li>Flower</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="skill data-analysis">
-        <h3>Data Analysis</h3>
-        <p>Pandas, NumPy, SQL, Power BI</p>
-      </div>
-      <div class="skill machine-learning">
-        <h3>Machine Learning</h3>
-        <p>TensorFlow, Keras, Scikit-learn</p>
-      </div>
-      <div class="skill database">
-        <h3>Database</h3>
-        <p>SQL Server, MySQL</p>
-      </div>
-      <div class="skill nlp">
-        <h3>NLP</h3>
-        <p>NLTK, LLMs</p>
-      </div>
-      <div class="skill deep-learning">
-        <h3>Deep Learning</h3>
-        <p>CNN, Yolo, Flower</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-
-      <div class="project">
-        <img src="target distribution.png" alt="Customer Churn Analysis and Prediction for Havayar Company">
-        <h3>Customer Churn Analysis and Prediction for <a href="https://www.havayar.com" target="_blank">Havayar Company</a></h3>
-        <p>Managed a Customer Churn Project addressing data quality challenges using machine learning techniques. Respon-
-          sibilities included data analysis, feature identification, engineering, and cleaning. Performed data transformations
-          and model development. Conducted hyperparameter tuning, model evaluation, and designed a retraining process.
-          Oversaw deployment, platform selection, API creation for model access, and prepared comprehensive technical
-          documentation.</p>
-        
-      </div>
-
-      <div class="project">
-        <img src="booktopia.jpg" alt="Booktopia Project">
-        <h3>Booktopia</h3>
-        <p>Conducted data analysis for a popular online book sales website,
-           extracted information from iranketab.com, and created a comprehensive book database.
-           This project involved using technologies such as pandas, regex, threading, Beautiful Soup,
-            numpy, ThreadPoolExecutor, MySQL, Python ORM, SQL alchemy, Streamlit, Hypothesis Testing, Seaborn, and Matplotlib.
-           My role included data extraction and cleaning, webscraping, hypothesis testing, metric design, and DSAR response.</p>
-        <a href="https://github.com/mohAhanin/Booktopia/blob/main/README.md" target="_blank">View Project</a>
-      </div>
-      <div class="project">
-        <img src="litopia.jpg" alt="Litopia Project">
-        <h3>Litopia</h3>
-        <p>Performed data analysis for a laptop sales company, evaluated competitors' inventories for company improvement.
-          This project involved using technologies such as DataBase design, SQL Queries, MySQL DBMS, Python Programming,
-          Machine Learning Algorithms, statistics and statistical tests, 
-          Power BI, Web Scraping, and Git. My role included data extraction from the database, web scraping,
-          DSAR response using notebooks and Power BI dashboards, ML model design and optimization,
-          problem-solving, data visualization, and data cleaning.</p>
-        <a href="https://github.com/mohAhanin/Litopia/blob/main/README.md" target="_blank">View Project</a>
-      </div>
-      
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul class="experience-list">
-      <li class="experience-item">
-        <h3>Data Science Intern</h3>
-        <p> <a href="https://www.arioo.ir/">Arioobarzan Co.</a> </p>
-        <p class="date">August 2024 - present</p>
-        <p>Specializing in image processing and utilizing YOLO for object detection and recognition
-          tasks.</p>
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2 class="section-title"><span class="code-comment">// </span>Projects</h2>
+        <div class="projects-container">
+          <div class="project-card">
+            <h3 class="project-title">Customer Churn Analysis and Prediction for Havayar Company</h3>
+            <p class="project-description">
+              Managed a Customer Churn Project addressing data quality challenges using machine learning techniques. Responsibilities included data analysis, feature identification, engineering, and cleaning. Performed data transformations and model development. Conducted hyperparameter tuning, model evaluation, and designed a retraining process. Oversaw deployment, platform selection, API creation for model access, and prepared comprehensive technical documentation.
+            </p>
+          </div>
           
-      </li>
-      <li class="experience-item">
-        <h3>Data Analysis Bootcamp</h3>
-        <p><a href="https://quera.org/">Quera</a></p>
-        <p class="date">July 2023 - November 2023</p>
-        <p>Conducted data analysis, database creation, web scraping, ML model design, and data visualization using
-          Python, SQL, Power BI, and Git.</p>
-      </li>
-      <li class="experience-item">
-        <h3>Deputy Secretary of The Artificial Intelligence Scientific Society</h3>
-        <p>Shiraz University of Technology</p>
-        <p class="date">April 2023 - April 2024</p>
-        <p>Organized workshops and scientific meetings in the field of artificial intelligence.</p>
-      </li>
-    </ul>
-  </section>
+          <div class="project-card">
+            <h3 class="project-title">Booktopia</h3>
+            <p class="project-description">
+              Conducted data analysis for a popular online book sales website, extracted information from iranketab.com, and created a comprehensive book database. This project involved using technologies such as pandas, regex, threading, Beautiful Soup, numpy, ThreadPoolExecutor, MySQL, Python ORM, SQL alchemy, Streamlit, Hypothesis Testing, Seaborn, and Matplotlib. My role included data extraction and cleaning, webscraping, hypothesis testing, metric design, and DSAR response.
+            </p>
+            <a href="#" class="project-link">View Project</a>
+          </div>
+          
+          <div class="project-card">
+            <h3 class="project-title">Litopia</h3>
+            <p class="project-description">
+              Performed data analysis for a laptop sales company, evaluated competitors' inventories for company improvement. This project involved using technologies such as DataBase design, SQL Queries, MySQL DBMS, Python Programming, Machine Learning Algorithms, statistics and statistical tests, Power BI, Web Scraping, and Git. My role included data extraction from the database, web scraping, DSAR response using notebooks and Power BI dashboards, ML model design and optimization, problem-solving, data visualization, and data cleaning.
+            </p>
+            <a href="#" class="project-link">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Mohammad Amin Ahanin</p>
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <h2 class="section-title"><span class="code-comment">// </span>Experience</h2>
+        <div class="experience-container">
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="position-title">Data Science Intern</h3>
+              <span class="company-name">Arioobarzan Co.</span>
+            </div>
+            <p class="experience-period">August 2024 - present</p>
+            <p class="experience-description">Specializing in image processing and utilizing YOLO for object detection and recognition tasks.</p>
+          </div>
+          
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="position-title">Data Analysis Bootcamp</h3>
+              <span class="company-name">Quera</span>
+            </div>
+            <p class="experience-period">July 2023 - November 2023</p>
+            <p class="experience-description">Conducted data analysis, database creation, web scraping, ML model design, and data visualization using Python, SQL, Power BI, and Git.</p>
+          </div>
+          
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="position-title">Deputy Secretary of The Artificial Intelligence Scientific Society</h3>
+              <span class="company-name">Shiraz University of Technology</span>
+            </div>
+            <p class="experience-period">April 2023 - April 2024</p>
+            <p class="experience-description">Organized workshops and scientific meetings in the field of artificial intelligence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mohammad Amin Ahanin</p>
+    </div>
   </footer>
 
-  <script src="Scripts.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/animations.js"></script>
 </body>
-
 </html>
