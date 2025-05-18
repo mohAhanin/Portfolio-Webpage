@@ -312,6 +312,28 @@ ul {
 /* Education section */
 .education-section {
   background-color: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.education-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/public/images/university.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.education-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .education-card {
@@ -320,6 +342,8 @@ ul {
   padding: calc(var(--spacing-unit) * 3);
   box-shadow: var(--card-shadow);
   border-left: 4px solid var(--accent-color);
+  backdrop-filter: blur(5px);
+  background-color: rgba(var(--bg-primary), 0.9);
 }
 
 .education-header {
