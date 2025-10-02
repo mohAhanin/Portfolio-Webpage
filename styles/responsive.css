@@ -238,7 +238,7 @@
   }
   
   .project-card, .experience-card, .education-card, .skill-category,
-  .certification-card, .research-interests {
+  .certification-card, .research-interests, .publication-card {
     box-shadow: none;
     border: 1px solid #ccc;
   }

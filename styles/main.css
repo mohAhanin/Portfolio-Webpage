@@ -538,6 +538,58 @@ ul {
   color: var(--text-primary);
 }
 
+/* Publications section */
+.publications-section {
+  background-color: var(--bg-primary);
+}
+
+.publications-container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 4);
+}
+
+.publication-card {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: calc(var(--spacing-unit) * 4);
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--accent-color);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.publication-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  color: var(--accent-color);
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.publication-venue {
+  font-weight: 600;
+  margin-bottom: var(--spacing-unit);
+  color: var(--text-primary);
+}
+
+.publication-authors {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  font-style: italic;
+}
+
+.publication-link {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
 /* Certifications section */
 .certifications-section {
   background-color: var(--bg-primary);
