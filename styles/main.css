@@ -439,6 +439,18 @@ ul {
 
 .project-description {
   margin-bottom: calc(var(--spacing-unit) * 2);
+  line-height: 1.6;
+}
+
+.project-description ul {
+  list-style-type: disc;
+  padding-left: calc(var(--spacing-unit) * 3);
+  margin-top: var(--spacing-unit);
+}
+
+.project-description li {
+  margin-bottom: var(--spacing-unit);
+  color: var(--text-primary);
 }
 
 .project-link {
@@ -483,6 +495,104 @@ ul {
   color: var(--text-secondary);
   font-size: var(--font-size-sm);
   margin-bottom: var(--spacing-unit);
+}
+
+.experience-description {
+  line-height: 1.6;
+}
+
+.experience-description ul {
+  list-style-type: disc;
+  padding-left: calc(var(--spacing-unit) * 3);
+  margin-top: var(--spacing-unit);
+}
+
+.experience-description li {
+  margin-bottom: calc(var(--spacing-unit) / 2);
+  color: var(--text-primary);
+}
+
+/* Research section */
+.research-section {
+  background-color: var(--bg-secondary);
+}
+
+.research-interests {
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-md);
+  padding: calc(var(--spacing-unit) * 3);
+  box-shadow: var(--card-shadow);
+}
+
+.research-list {
+  list-style-type: disc;
+  padding-left: calc(var(--spacing-unit) * 4);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.research-list li {
+  font-size: var(--font-size-md);
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+/* Certifications section */
+.certifications-section {
+  background-color: var(--bg-primary);
+}
+
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: calc(var(--spacing-unit) * 3);
+}
+
+.certification-card {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: calc(var(--spacing-unit) * 3);
+  box-shadow: var(--card-shadow);
+  border-top: 3px solid var(--accent-color);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certification-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-unit);
+  color: var(--accent-color);
+}
+
+.certification-issuer {
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing-unit) / 2);
+  color: var(--text-primary);
+}
+
+.certification-date {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+.certification-id {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  font-style: italic;
+}
+
+.certification-link {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: var(--spacing-unit);
 }
 
 /* Footer */

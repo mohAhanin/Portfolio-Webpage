@@ -124,6 +124,17 @@
   .social-link {
     margin: 0;
   }
+
+  /* Research layout */
+  .research-list {
+    grid-template-columns: 1fr;
+    padding-left: calc(var(--spacing-unit) * 2);
+  }
+
+  /* Certifications layout */
+  .certifications-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Tablet styles */
@@ -147,6 +158,16 @@
   .profile-photo {
     width: 180px;
     height: 180px;
+  }
+
+  /* Research layout */
+  .research-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Certifications layout */
+  .certifications-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -216,7 +237,8 @@
     text-decoration: none;
   }
   
-  .project-card, .experience-card, .education-card, .skill-category {
+  .project-card, .experience-card, .education-card, .skill-category,
+  .certification-card, .research-interests {
     box-shadow: none;
     border: 1px solid #ccc;
   }
